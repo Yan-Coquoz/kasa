@@ -1,13 +1,15 @@
 import React from "react";
+import logo from "../../assets/LOGO_white.svg";
 
 import "./style.scss";
 
-const Footer = (props) => {
-  // écrire le code ici
+const Footer = () => {
   return (
-    <div>
-      <div>logo</div>
-      <div>les droits</div>
+    <div className="footer">
+      <div className="footer__bloc-logo">
+        <img src={logo} alt="logo noir et blanc" />{" "}
+      </div>
+      <div className="footer__right">© 2020 Kasa. All rights reserved</div>
     </div>
   );
 };

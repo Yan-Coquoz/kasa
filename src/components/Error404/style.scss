@@ -1,0 +1,58 @@
+@use "../../styles/vars" as v;
+
+.page404 {
+  color: v.$kasa_color;
+  width: 100%;
+  margin: 0 auto;
+  &__bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title {
+      font-size: 18rem;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &-oups {
+      font-size: 36px;
+      text-align: center;
+    }
+  }
+  &__goback {
+    width: 100%;
+    position: fixed;
+    bottom: 25%;
+    left: 0;
+    text-align: center;
+    font-size: 18px;
+    color: v.$kasa_color;
+    display: block;
+  }
+}
+@media screen and (max-width: 460px) {
+  .page404 {
+    &__bloc-title {
+      font-size: 12rem;
+    }
+    &__bloc-oups {
+      font-size: 10rem;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .page404 {
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 0;
+
+    &__bloc-title {
+      font-size: 6rem;
+    }
+    &__bloc-oups {
+      font-size: 8rem;
+    }
+  }
+}

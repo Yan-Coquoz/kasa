@@ -1,14 +1,21 @@
 import React from "react";
 
+import bg from "../../assets/mainBG.png";
 import "./style.scss";
 
-const Home = (props) => {
-  // écrire le code ici
+const Home = () => {
   return (
-    <div>
-      <div>Image</div>
-      <div>compo Carte</div>
-    </div>
+    <>
+      <div className="home">
+        <div className="home__bloc">
+          <img src={bg} className="home__bloc-img" alt="montagne et mer" />
+          <span className="home__bloc-span">
+            Chez vous, partout et ailleurs
+          </span>
+        </div>
+        <div>compo Carte</div>
+      </div>
+    </>
   );
 };
 

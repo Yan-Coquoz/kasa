@@ -1,19 +1,47 @@
 @use "../../styles/vars" as v;
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  &__h1 {
+    display: inline-block;
+  }
   &__nav {
-    width: 15%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: end;
+    width: 309px;
   }
   &__nav_link {
     color: v.$kasa_color;
     text-decoration: none;
+
     &:hover {
       text-decoration: underline;
+    }
+
+    &:nth-child(2) {
+      margin-left: 2rem;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .header {
+    &__nav {
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .header {
+    gap: 1rem;
+    &__nav {
+      &_link {
+        font-size: 18px;
+      }
     }
   }
 }

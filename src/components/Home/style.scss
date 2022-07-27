@@ -1,0 +1,25 @@
+@use "../../styles/vars" as v;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__bloc {
+    position: relative;
+    width: 100%;
+    &-img {
+      border-radius: 25px;
+      width: 100%;
+      object-fit: contain;
+    }
+    &-span {
+      color: v.$kasa_color_footer;
+      font-size: 48px;
+      position: absolute;
+      top: 35%;
+      left: 25%;
+      line-height: 2;
+    }
+  }
+}
