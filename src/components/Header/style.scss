@@ -1,6 +1,19 @@
+@use "../../styles/vars" as v;
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  &__nav {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__nav_link {
+    color: v.$kasa_color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

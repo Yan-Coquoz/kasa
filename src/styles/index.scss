@@ -1,0 +1,10 @@
+@use "normalize";
+@use "vars" as v;
+
+body {
+  margin: 0;
+  font-family: v.$kasa_font;
+  background-color: #e5e5e5;
+  width: 90%;
+  margin: 0 auto;
+}
