@@ -32,6 +32,17 @@
           font-size: 1.5rem;
           font-weight: normal;
         }
+        // btn chevron
+        &_bloc-icon {
+          padding: 1rem;
+          border: none;
+          background-color: v.$kasa_color;
+          &_icon {
+            &.show {
+              transform: rotate(180deg);
+            }
+          }
+        }
       }
       &__bloc-modal {
         background-color: v.$kasa_bgColor_modal;

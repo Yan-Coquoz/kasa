@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "../Header";
 import Footer from "../Footer";
 import Home from "../Home";
@@ -15,7 +16,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/error404" element={<Error404 />} />
-
         <Route path="*" element={<Navigate to="/error404" />} />
       </Routes>
       <Footer />

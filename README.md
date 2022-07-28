@@ -17,10 +17,10 @@
   npm install -D sass
   ```
 
-- Eslint
+- Eslint et Prettier
 
   ```bash
-  npm install eslint --save-dev
+  npm install eslint --save-dev eslint-config-prettier prettier
   # config
   npm init @eslint/config
   ```

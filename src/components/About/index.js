@@ -4,11 +4,12 @@ import "./style.scss";
 import chevron from "../../assets/chevron.svg";
 
 const About = () => {
-  function openModal(section) {
-    const modal = document.querySelector(
-      `.about__main-container__para__bloc-modal .${section}`,
-    );
+  function openModal(evt, section) {
+    console.log(evt.target.id);
+    const modal = document.querySelector(`.${section}`);
+    const btn = document.querySelector(`#${section}`);
     modal.classList.toggle("active");
+    btn.classList.toggle("show");
   }
   return (
     <div className="about">
@@ -23,16 +24,17 @@ const About = () => {
             <h3 className="about__main-container__para__bloc-title_title">
               Fiabilité
             </h3>
-            <div
-              className="about__main-container__para__bloc-title_bloc-icon "
-              onClick={() => openModal("fiablite")}
+            <button
+              className="about__main-container__para__bloc-title_bloc-icon"
+              onClick={(evt) => openModal(evt, "fiablite")}
             >
               <img
                 src={chevron}
                 alt="icon"
+                id="fiablite"
                 className="about__main-container__para__bloc-title_bloc-icon_icon"
               />
-            </div>
+            </button>
           </div>
           <div className="about__main-container__para__bloc-modal fiablite">
             <p className="about__main-container__para__bloc-modal_p">
@@ -50,11 +52,12 @@ const About = () => {
             </h3>
             <div
               className="about__main-container__para__bloc-title_bloc-icon"
-              onClick={() => openModal("respect")}
+              onClick={(evt) => openModal(evt, "respect")}
             >
               <img
                 src={chevron}
                 alt="icon"
+                id="respect"
                 className="about__main-container__para__bloc-title_bloc-icon_icon"
               />
             </div>
@@ -75,11 +78,12 @@ const About = () => {
             </h3>
             <div
               className="about__main-container__para__bloc-title_bloc-icon"
-              onClick={() => openModal("service")}
+              onClick={(evt) => openModal(evt, "service")}
             >
               <img
                 src={chevron}
                 alt="icon"
+                id="service"
                 className="about__main-container__para__bloc-title_bloc-icon_icon"
               />
             </div>
@@ -100,11 +104,12 @@ const About = () => {
             </h3>
             <div
               className="about__main-container__para__bloc-title_bloc-icon"
-              onClick={() => openModal("securite")}
+              onClick={(evt) => openModal(evt, "securite")}
             >
               <img
                 src={chevron}
                 alt="icon"
+                id="securite"
                 className="about__main-container__para__bloc-title_bloc-icon_icon"
               />
             </div>
