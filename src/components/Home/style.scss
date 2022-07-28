@@ -11,7 +11,7 @@
     &-img {
       border-radius: 25px;
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
     &-span {
       color: v.$kasa_color_footer;

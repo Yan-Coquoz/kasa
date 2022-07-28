@@ -21,13 +21,13 @@
   }
   &__goback {
     width: 100%;
-    position: fixed;
     bottom: 25%;
     left: 0;
     text-align: center;
     font-size: 18px;
     color: v.$kasa_color;
     display: block;
+    margin-top: 3rem;
   }
 }
 @media screen and (max-width: 460px) {

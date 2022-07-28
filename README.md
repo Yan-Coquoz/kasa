@@ -5,16 +5,24 @@
 
 ## Dépendance
 
-- Ajout de React Router
+- React Router
 
   ```bash
   npm install react-router-dom@6
   ```
 
-- Ajout de SASS
+- SASS
 
   ```bash
   npm install -D sass
+  ```
+
+- Eslint
+
+  ```bash
+  npm install eslint --save-dev
+  # config
+  npm init @eslint/config
   ```
 
 ## Contraintes

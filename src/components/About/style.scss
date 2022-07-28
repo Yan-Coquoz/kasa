@@ -1,0 +1,52 @@
+@use "../../styles/vars" as v;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &__bg-bloc {
+    text-align: center;
+    width: 100%;
+    &_img {
+      border-radius: 25px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  &__main-container {
+    width: 80%;
+    margin: 2rem auto;
+    &__para {
+      width: 100%;
+      margin-top: 2rem;
+      &__bloc-title {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: v.$kasa_color;
+        padding: 0 1rem;
+        border-radius: 5px;
+        &_title {
+          color: v.$kasa_color_footer;
+          font-size: 1.5rem;
+          font-weight: normal;
+        }
+      }
+      &__bloc-modal {
+        background-color: v.$kasa_bgColor_modal;
+        border: none;
+        width: 100%;
+        padding: 2rem;
+        border-radius: 0 0 5px 5px;
+        display: none;
+        &.active {
+          display: block;
+        }
+        &_p {
+          color: v.$kasa_color;
+        }
+      }
+    }
+  }
+}
