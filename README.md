@@ -25,6 +25,12 @@
   npm init @eslint/config
   ```
 
+  - Proptypes
+
+   ```bash
+   npm i prop-types
+   ```
+
 ## Contraintes
 
 [Contraintes en PDF](https://course.oc-static.com/projects/Front-End+V2/P9+React+1/Coding+guidelines+Kasa+FR.pdf)

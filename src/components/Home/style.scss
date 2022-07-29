@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   &__bloc {
     position: relative;
     width: 100%;
@@ -21,5 +20,17 @@
       left: 25%;
       line-height: 2;
     }
+  }
+  &__card-container {
+    background-color: v.$kasa_bgColor_modal;
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+    border-radius: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // gap: 2rem;
   }
 }
