@@ -10,23 +10,24 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.scss";
 
 const App = () => {
-  return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        {/* Pas de / */}
-        <Route path="location">
-          {/* Route enfant */}
-          <Route path=":id" element={<Location />} />
-        </Route>
-        <Route path="/error404" element={<Error404 />} />
-        <Route path="*" element={<Navigate to="/error404" />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                {/* Pas de / */}
+                <Route path="location">
+                    {/* Route enfant */}
+                    <Route path=":id" element={<Location />} />
+                </Route>
+                <Route path="/error404" element={<Error404 />} />
+                <Route path="*" element={<Navigate to="/error404" />} />
+            </Routes>
+            <Footer />
+        </div>
+    );
 };
 
 export default App;
+

@@ -10,20 +10,20 @@ import "./style.scss";
  * @returns {HTMLElement}
  */
 const Carte = ({ title, id }) => {
-  const slug = `/location/${id}`;
-  return (
-    <div className="carte">
-      <Link to={slug}>
-        <div className="carte__bloc">
-          <h3 className="carte__bloc-title">{title}</h3>
+    const slug = `/location/${id}`;
+    return (
+        <div className="carte">
+            <Link to={slug}>
+                <div className="carte__bloc">
+                    <h3 className="carte__bloc-title">{title}</h3>
+                </div>
+            </Link>
         </div>
-      </Link>
-    </div>
-  );
+    );
 };
 
 Carte.propTypes = {
-  title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
 };
 export default Carte;

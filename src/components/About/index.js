@@ -1,57 +1,56 @@
-/* eslint-disable indent */
 import React from "react";
 import bg from "../../assets/aboutBG.png";
 import "./style.scss";
 import Modale from "../Modale";
 
 const About = () => {
-  const values = [
-    {
-      title: "Fiabilité",
-      comment: `Les annonces postées sur Kasa garantissent une fiabilité totale.
+    const values = [
+        {
+            title: "Fiabilité",
+            comment: `Les annonces postées sur Kasa garantissent une fiabilité totale.
     Les photos sont conformes aux logements, et toutes les
     informations sont régulièrement vérifiées par nos équipes.`,
-      id: "fiablite",
-    },
-    {
-      title: "Respect",
-      comment: `La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
+            id: "fiablite",
+        },
+        {
+            title: "Respect",
+            comment: `La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
     comportement discriminatoire ou de perturbation du voisinage
     entraînera une exclusion de notre plateforme.`,
-      id: "respect",
-    },
-    {
-      title: "Service",
-      comment: ` Nos équipes se tiennent à votre disposition pour vous fournir une
+            id: "respect",
+        },
+        {
+            title: "Service",
+            comment: ` Nos équipes se tiennent à votre disposition pour vous fournir une
     expérience parfaite. N'hésitez pas à nous contacter si vous
     avez la moindre question.`,
-      id: "service",
-    },
-    {
-      title: "Securité",
-      comment: `La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
+            id: "service",
+        },
+        {
+            title: "Securité",
+            comment: `La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
     pour les voyageurs, chaque logement correspond aux critères de
     sécurité établis par nos services. En laissant une note aussi bien
     à l'hôte qu'au locataire, cela permet à nos équipes de
     vérifier que les standards sont bien respectés. Nous organisons
     également des ateliers sur la sécurité domestique pour nos hôtes.`,
-      id: "securite",
-    },
-  ];
+            id: "securite",
+        },
+    ];
 
-  return (
-    <div className="about">
-      <div className="about__bg-bloc">
-        <img src={bg} alt="montagne" className="about__bg-bloc_img" />
-      </div>
-      {/* groupe modale */}
-      <div className="about__main-container">
-        {values.map((data) => {
-          return <Modale key={data.id} {...data} />;
-        })}
-      </div>
-    </div>
-  );
+    return (
+        <div className="about">
+            <div className="about__bg-bloc">
+                <img src={bg} alt="montagne" className="about__bg-bloc_img" />
+            </div>
+            {/* groupe modale */}
+            <div className="about__main-container">
+                {values.map((data) => {
+                    return <Modale key={data.id} {...data} />;
+                })}
+            </div>
+        </div>
+    );
 };
 
 export default About;

@@ -1,24 +1,29 @@
 import React from "react";
 import { datas } from "../../data/datas";
 import { useParams } from "react-router-dom";
+import Title from "./Title";
+import Identity from "./Identity";
 import "./style.scss";
 
 const Location = () => {
-  //TODO récup de l'id dans l'URL
-  // TODO rechercher l'id dans la BDD
+    const { id } = useParams();
 
-  const { id } = useParams();
+    const locData = datas.filter((data) => {
+        return data.id === id;
+    });
 
-  const locData = datas.filter((data) => {
-    return data.id === id;
-  });
-  console.log(locData);
+    const oneLocation = locData[0];
 
-  return (
-    <div>
-      <h2>la location {id}</h2>
-    </div>
-  );
+    return (
+        <div>
+            slider
+            <div>
+                <Title {...oneLocation} />
+                <Identity {...oneLocation} />
+            </div>
+            <div>modales</div>
+        </div>
+    );
 };
 
 export default Location;
