@@ -1,0 +1,43 @@
+@use "../../../styles/vars" as v;
+
+.location__identity-container {
+    width: 100%;
+    &__bloc-name {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        &__name {
+            display: inline-block;
+            color: v.$kasa_color;
+            flex-wrap: wrap;
+            width: 93px;
+            height: 52px;
+            text-align: end;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 18px;
+        }
+        &__bloc-photo {
+            width: 4rem;
+            height: 4rem;
+            margin-left: 1rem;
+            &__photo {
+                border-radius: 50%;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+    &__bloc-star {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2rem;
+        &__star {
+            color: #e3e3e3;
+            margin-left: 0.5rem;
+            &.active {
+                color: v.$kasa_color;
+            }
+        }
+    }
+}

@@ -8,12 +8,12 @@ import "./style.scss";
  */
 const Title = ({ title, location, tags }) => {
     return (
-        <div className="location_title-container">
-            <h2 className="location_title-container__title">{title}</h2>
-            <h3 className="location_title-container__loc">{location}</h3>
+        <div className="location__title-container">
+            <h2 className="location__title-container__title">{title}</h2>
+            <h3 className="location__title-container__loc">{location}</h3>
             {tags.map((tag) => {
                 return (
-                    <span key={tag} className="location_title-container__tag">
+                    <span key={tag} className="location__title-container__tag">
                         {tag}
                     </span>
                 );
