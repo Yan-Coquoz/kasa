@@ -4,8 +4,8 @@ import Star from "./Star";
 import "./style.scss";
 
 /**
- * @param {arrayOfString} host nom et photo de l'utilisateur
- * @param {string} rating note de la location
+ * @prop {arrayOfString} host nom et photo de l'utilisateur
+ * @prop {string} rating note de la location
  * @returns {JSXElement}
  */
 const Identity = ({ host, rating }) => {
@@ -32,7 +32,7 @@ const Identity = ({ host, rating }) => {
 };
 
 Identity.propTypes = {
-    host: PropTypes.arrayOf(PropTypes.string),
+    host: PropTypes.objectOf(PropTypes.string),
     rating: PropTypes.string,
 };
 export default Identity;

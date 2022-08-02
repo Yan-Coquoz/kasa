@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 import "./style.scss";
 
 /**
- * @param {number} rate favoris
- * @returns
+ * @prop {number} rate favoris
+ * @returns {JSXElement}
  */
 const Star = ({ rate }) => {
     const starMax = 5;

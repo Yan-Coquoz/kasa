@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import "./style.scss";
 
 /**
- * @param {*} param0
+ * @prop {string} title nom de la location
+ * @prop {string} location localisation de la location
+ * @prop {arrayOfString} tags mots clés
  * @returns
  */
 const Title = ({ title, location, tags }) => {
@@ -21,9 +23,10 @@ const Title = ({ title, location, tags }) => {
         </div>
     );
 };
+
 Title.propTypes = {
     title: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string),
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 export default Title;
