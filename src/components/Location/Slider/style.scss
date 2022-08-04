@@ -1,0 +1,50 @@
+@use "../../../styles/vars" as v;
+
+.slider {
+    width: 100%;
+    position: relative;
+    // container image
+    &__bloc-ul {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+        height: 415px;
+        overflow: hidden;
+        border-radius: 25px;
+        &__bloc-li {
+            &__img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+    // container chevron
+    &__bloc-chevron {
+        &__partie-g {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 50%;
+            left: 3rem;
+            z-index: 10;
+            &__gauche {
+                object-fit: contain;
+                width: 100%;
+                transform: rotate(270deg);
+            }
+        }
+        &__partie-d {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 50%;
+            right: 3rem;
+            &__droite {
+                object-fit: contain;
+                width: 100%;
+                transform: rotate(90deg);
+            }
+        }
+    }
+}

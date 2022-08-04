@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Title from "./Title";
 import Identity from "./Identity";
 import Modale from "../Modale";
+import Slider from "./Slider";
 import "./style.scss";
 
 const Location = () => {
@@ -17,7 +18,9 @@ const Location = () => {
 
     return (
         <div className="location">
-            <div className="location__slider">slider</div>
+            <div className="location__slider">
+                <Slider {...oneLocation} />
+            </div>
 
             <div className="location__header">
                 <Title {...oneLocation} />
@@ -25,12 +28,12 @@ const Location = () => {
             </div>
             <div className="location__modals">
                 <Modale
-                    idModal="desc"
+                    id="desc"
                     title="Description"
                     comment={oneLocation.description}
                 />
                 <Modale
-                    idModal="utils"
+                    id="utils"
                     comment={oneLocation.equipments}
                     title="Équipements"
                 />

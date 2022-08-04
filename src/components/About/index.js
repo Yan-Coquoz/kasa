@@ -45,8 +45,8 @@ const About = () => {
             </div>
             {/* groupe modale */}
             <div className="about__main-container">
-                {values.map((data) => {
-                    return <Modale key={data.id} {...data} />;
+                {values.map((obj) => {
+                    return <Modale key={obj.id} {...obj} />;
                 })}
             </div>
         </div>
