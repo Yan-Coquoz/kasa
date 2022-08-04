@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import chevron from "../../../assets/chevron.svg";
 import "./style.scss";
 
 const Slider = ({ pictures }) => {
-    console.log(pictures);
+    const [current, setCurrent] = useState(0);
+    const length = pictures.length;
 
     function handleChevronG() {
-        console.log("je vais à gauche");
+        setCurrent(current === 0 ? length - 1 : current - 1);
     }
     function handleChevronD() {
-        console.log("je vais à droite");
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    }
+
+    // test si le tableau est présent ou inférieur ou = à 0
+    if (!Array.isArray(pictures) || pictures.length <= 0) {
+        return null;
     }
 
     return (
@@ -18,12 +24,21 @@ const Slider = ({ pictures }) => {
             <ul className="slider__bloc-ul">
                 {pictures.map((pict, key) => {
                     return (
-                        <li key={key} className="slider__bloc-ul__bloc-li">
-                            <img
-                                src={pict}
-                                alt="image du logement"
-                                className="slider__bloc-ul__bloc-li__img"
-                            />
+                        <li
+                            key={key}
+                            className={
+                                "slider__bloc-ul__bloc-li" + key === current
+                                    ? "slider__bloc-ul__bloc-li active"
+                                    : "slider__bloc-ul__bloc-li"
+                            }
+                        >
+                            {key === current && (
+                                <img
+                                    src={pict}
+                                    alt="image du logement"
+                                    className="slider__bloc-ul__bloc-li__img"
+                                />
+                            )}
                         </li>
                     );
                 })}

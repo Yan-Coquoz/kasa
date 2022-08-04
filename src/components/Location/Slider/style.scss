@@ -28,6 +28,8 @@
             top: 50%;
             left: 3rem;
             z-index: 10;
+            cursor: pointer;
+            user-select: none;
             &__gauche {
                 object-fit: contain;
                 width: 100%;
@@ -35,11 +37,14 @@
             }
         }
         &__partie-d {
+            z-index: 10;
+            cursor: pointer;
             width: 80px;
             height: 80px;
             position: absolute;
             top: 50%;
             right: 3rem;
+            user-select: none;
             &__droite {
                 object-fit: contain;
                 width: 100%;
