@@ -58,6 +58,6 @@ const Modale = ({ id, title, comment }) => {
 Modale.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    comment: PropTypes.string || PropTypes.arrayOf(PropTypes.string),
+    comment: PropTypes.any.isRequired,
 };
 export default Modale;

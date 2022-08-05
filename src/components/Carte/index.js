@@ -5,17 +5,23 @@ import "./style.scss";
 
 /**
  *
- * @param {string} titre de la carte
- * @param {string} id de la carte
+ * @prop {string} titre de la carte
+ * @prop {string} id de la carte
+ * @prop {string} cover de la carte
  * @returns {HTMLElement}
  */
-const Carte = ({ title, id }) => {
+const Carte = ({ title, id, cover }) => {
     const slug = `/location/${id}`;
     return (
         <div className="carte">
             <Link to={slug}>
                 <div className="carte__bloc">
-                    <h3 className="carte__bloc-title">{title}</h3>
+                    <img
+                        src={cover}
+                        alt="Image de couverture"
+                        className="carte__bloc__img"
+                    />
+                    <h3 className="carte__bloc__title">{title}</h3>
                 </div>
             </Link>
         </div>
@@ -25,5 +31,6 @@ const Carte = ({ title, id }) => {
 Carte.propTypes = {
     title: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired,
 };
 export default Carte;

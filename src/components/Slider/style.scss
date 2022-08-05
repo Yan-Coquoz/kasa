@@ -1,19 +1,17 @@
-@use "../../../styles/vars" as v;
+@use "../../styles/vars" as v;
 
 .slider {
-    width: 100%;
+    // width: 100%;
     position: relative;
     // container image
     &__bloc-ul {
         list-style: none;
         padding: 0;
         width: 100%;
-        overflow: hidden;
-        height: 415px;
-        overflow: hidden;
-        border-radius: 25px;
         &__bloc-li {
             &__img {
+                border-radius: 25px;
+                height: 415px;
                 object-fit: cover;
                 width: 100%;
             }

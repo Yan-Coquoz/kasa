@@ -11,7 +11,7 @@ import "./App.scss";
 
 const App = () => {
     return (
-        <div className="App">
+        <div className="app">
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -30,4 +30,3 @@ const App = () => {
 };
 
 export default App;
-

@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import chevron from "../../../assets/chevron.svg";
+import chevron from "../../assets/chevron.svg";
 import "./style.scss";
-
+/**
+ *
+ * @prop {arrayOfString} pictures urls des l'images
+ * @returns {JSXElement}
+ */
 const Slider = ({ pictures }) => {
     const [current, setCurrent] = useState(0);
     const length = pictures.length;
@@ -22,7 +26,7 @@ const Slider = ({ pictures }) => {
     return (
         <div className="slider">
             <ul className="slider__bloc-ul">
-                {pictures.map((pict, key) => {
+                {pictures.map((picture, key) => {
                     return (
                         <li
                             key={key}
@@ -34,7 +38,7 @@ const Slider = ({ pictures }) => {
                         >
                             {key === current && (
                                 <img
-                                    src={pict}
+                                    src={picture}
                                     alt="image du logement"
                                     className="slider__bloc-ul__bloc-li__img"
                                 />

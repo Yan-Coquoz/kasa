@@ -13,13 +13,18 @@ const Title = ({ title, location, tags }) => {
         <div className="location__title-container">
             <h2 className="location__title-container__title">{title}</h2>
             <h3 className="location__title-container__loc">{location}</h3>
-            {tags.map((tag) => {
-                return (
-                    <span key={tag} className="location__title-container__tag">
-                        {tag}
-                    </span>
-                );
-            })}
+            <div className="location__title-container__bloc-tag">
+                {tags.map((tag) => {
+                    return (
+                        <span
+                            key={tag}
+                            className="location__title-container__bloc-tag__tag"
+                        >
+                            {tag}
+                        </span>
+                    );
+                })}
+            </div>
         </div>
     );
 };

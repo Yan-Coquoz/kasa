@@ -1,25 +1,25 @@
 @use "../../styles/vars" as v;
 
 .footer {
-  margin-top: 2rem;
-  align-items: center;
-  background-color: v.$kasa_bgColor_footer;
-  display: flex;
-  flex-direction: column;
-  height: 12rem;
-  justify-content: center;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  &__right {
-    color: v.$kasa_color_footer;
     margin-top: 2rem;
-  }
+    align-items: center;
+    background-color: v.$kasa_bgColor_footer;
+    display: flex;
+    flex-direction: column;
+    height: 12rem;
+    justify-content: center;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    &__right {
+        color: v.$kasa_color_footer;
+        margin-top: 2rem;
+    }
 }
 @media screen and (max-width: 390px) {
-  .footer {
-    &__right {
-      font-size: 12px;
+    .footer {
+        &__right {
+            font-size: 12px;
+        }
     }
-  }
 }

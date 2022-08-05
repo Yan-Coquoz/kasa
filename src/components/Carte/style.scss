@@ -1,23 +1,35 @@
 @use "../../styles/vars" as v;
 
 .carte {
-  &__bloc {
-    width: 345px;
-    height: 345px;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 96, 96, 1) 0%,
-      rgba(129, 49, 49, 1) 100%
-    );
-    border-radius: 10px;
-    position: relative;
-    &-title {
-      position: absolute;
-      color: v.$kasa_color_footer;
-      bottom: 0;
-      margin-left: 1rem;
-      font-size: 18px;
-      font-weight: normal;
+    &__bloc {
+        width: 345px;
+        position: relative;
+        &__img {
+            height: 345px;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 96, 96, 1) 0%,
+                rgba(129, 49, 49, 1) 100%
+            );
+            border-radius: 10px;
+            object-fit: cover;
+            width: 100%;
+        }
+        &__title {
+            position: absolute;
+            color: v.$kasa_color_footer;
+            bottom: 0;
+            margin-left: 1rem;
+            font-size: 18px;
+            font-weight: normal;
+        }
     }
-  }
+}
+@media screen and (max-width: 390px) {
+    .carte {
+        &__bloc {
+            width: 335px;
+            height: 225px;
+        }
+    }
 }

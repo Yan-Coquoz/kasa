@@ -1,36 +1,66 @@
 @use "../../styles/vars" as v;
 
 .home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &__bloc {
-    position: relative;
-    width: 100%;
-    &-img {
-      border-radius: 25px;
-      width: 100%;
-      object-fit: cover;
-    }
-    &-span {
-      color: v.$kasa_color_footer;
-      font-size: 48px;
-      position: absolute;
-      top: 35%;
-      left: 25%;
-      line-height: 2;
-    }
-  }
-  &__card-container {
-    background-color: v.$kasa_bgColor_modal;
-    padding: 3rem 2rem;
-    margin-top: 2rem;
-    border-radius: 25px;
-    width: 100%;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 3.125rem;
-  }
+    flex-direction: column;
+    align-items: center;
+    &__bloc {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-img {
+            border-radius: 25px;
+            width: 100%;
+            object-fit: cover;
+        }
+        &-title {
+            color: v.$kasa_color_footer;
+            font-size: 48px;
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            line-height: 2;
+        }
+    }
+    &__card-container {
+        background-color: v.$kasa_bgColor_modal;
+        padding: 3rem 2rem;
+        margin-top: 2rem;
+        border-radius: 25px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3.125rem;
+    }
+}
+@media screen and (max-width: 1600px) {
+}
+@media screen and (max-width: 390px) {
+}
+
+@media screen and (max-width: 390px) {
+    .home {
+        &__bloc {
+            width: 335px;
+            &-img {
+                height: 111px;
+                border-radius: 10px;
+            }
+            &-title {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 100%;
+                width: 65%;
+                left: 35%;
+                top: 60%;
+            }
+        }
+    }
 }
