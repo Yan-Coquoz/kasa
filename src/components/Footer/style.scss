@@ -1,16 +1,16 @@
 @use "../../styles/vars" as v;
 
 .footer {
-    margin-top: 2rem;
     align-items: center;
     background-color: v.$kasa_bgColor_footer;
     display: flex;
     flex-direction: column;
     height: 12rem;
     justify-content: center;
-    left: 0;
-    width: 100%;
+    width: 100vw;
+    margin-top: 3rem;
     position: absolute;
+    left: 0;
     &__right {
         color: v.$kasa_color_footer;
         margin-top: 2rem;

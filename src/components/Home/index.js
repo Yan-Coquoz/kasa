@@ -16,20 +16,24 @@ const Home = () => {
     }, []);
 
     return (
-        <>
+        <div className="home">
             {dataLoading ? (
                 <Loader />
             ) : (
-                <div className="home">
+                <>
                     <div className="home__bloc">
-                        <img
-                            src={bg}
-                            className="home__bloc-img"
-                            alt="montagne et mer"
-                        />
-                        <span className="home__bloc-title">
-                            Chez vous, partout et ailleurs
-                        </span>
+                        <div className="home__bloc__bloc-img">
+                            <img
+                                src={bg}
+                                className="home__bloc__bloc-img__img"
+                                alt="montagne et mer"
+                            />
+                        </div>
+                        <div className="home__bloc__title-bloc">
+                            <span className="home__bloc-title">
+                                Chez vous, partout et ailleurs
+                            </span>
+                        </div>
                     </div>
                     <div className="home__card-container">
                         {datas.map((data) => {
@@ -43,9 +47,9 @@ const Home = () => {
                             );
                         })}
                     </div>
-                </div>
+                </>
             )}
-        </>
+        </div>
     );
 };
 

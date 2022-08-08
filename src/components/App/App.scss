@@ -1,1 +1,12 @@
+.app {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
 
+    &__bloc {
+        width: 80%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}

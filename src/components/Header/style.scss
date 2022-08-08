@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin: 0 auto;
     &__h1 {
         display: inline-block;
     }
@@ -13,7 +14,7 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        width: 309px;
+        width: 350px;
     }
     &__nav_link {
         color: v.$kasa_color;
@@ -30,9 +31,10 @@
 }
 @media screen and (max-width: 500px) {
     .header {
+        gap: 3rem;
         &__nav {
             &_link {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
     }

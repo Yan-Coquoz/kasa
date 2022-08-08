@@ -12,19 +12,24 @@ import "./App.scss";
 const App = () => {
     return (
         <div className="app">
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                {/* Pas de / */}
-                <Route path="location">
-                    {/* Route enfant */}
-                    <Route path=":id" element={<Location />} />
-                </Route>
-                <Route path="/error404" element={<Error404 />} />
-                <Route path="*" element={<Navigate to="/error404" />} />
-            </Routes>
-            <Footer />
+            <div className="app__bloc">
+                <Header />
+                <div className="app__bloc-route">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        {/* Pas de / */}
+                        <Route path="location">
+                            {/* Route enfant */}
+                            <Route path=":id" element={<Location />} />
+                        </Route>
+                        <Route path="/error404" element={<Error404 />} />
+                        <Route path="*" element={<Navigate to="/error404" />} />
+                    </Routes>
+                </div>
+                {/* TODO Voir le positionnement du footer */}
+                <Footer />
+            </div>
         </div>
     );
 };

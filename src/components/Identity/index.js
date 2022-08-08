@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Star from "./Star";
+import Star from "../Star";
 import "./style.scss";
 
 /**
