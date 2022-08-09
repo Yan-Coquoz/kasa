@@ -1,12 +1,14 @@
 .app {
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 100%;
-
     &__bloc {
         width: 80%;
-        max-width: 1400px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
         margin: 0 auto;
     }
 }

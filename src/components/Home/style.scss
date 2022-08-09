@@ -3,49 +3,59 @@
 .home {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 13rem;
-    margin: 1rem 0;
+    justify-content: center;
+    margin: 1rem auto;
+    max-width: 1240px;
     &__bloc {
-        position: relative;
         display: flex;
         align-items: center;
+        flex-direction: column;
         justify-content: center;
-        margin-bottom: 3rem;
-        &__bloc-img {
-            width: 100%;
-            height: 100%;
-            background: darken($color: #000000, $amount: 100);
-            border-radius: 25px;
-            height: 13rem;
-            &__img {
-                overflow: hidden;
-                opacity: 0.9;
-                border-radius: 25px;
+        // SECTION container entête
+        &__header {
+            position: relative;
+            &__bloc-img {
                 width: 100%;
-                object-fit: cover;
+                height: 100%;
+                background: darken($color: #000000, $amount: 100);
+                border-radius: 25px;
                 height: 13rem;
+                &__img {
+                    overflow: hidden;
+                    opacity: 0.9;
+                    border-radius: 25px;
+                    width: 100%;
+                    object-fit: cover;
+                    height: 13rem;
+                }
+            }
+            &__title-bloc {
+                margin-bottom: 2rem;
+                &__title {
+                    width: 100%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    left: 50%;
+                    position: absolute;
+                    color: v.$kasa_color_footer;
+                    font-size: 3rem;
+                    margin: 0;
+                    text-align: center;
+                }
             }
         }
-        &__title-bloc {
-            color: v.$kasa_color_footer;
-            font-size: 3rem;
-            position: absolute;
-            top: 50%;
-            left: auto;
-            transform: translate(-0%, -50%);
+        // SECTION container des cartes
+        &__card-container {
+            background-color: v.$kasa_bgColor_modal;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-radius: 25px;
+            padding: 3rem 2rem;
+            gap: 2rem;
+            justify-content: center;
+            width: 100%;
         }
-    }
-    // container des cartes
-    &__card-container {
-        background-color: v.$kasa_bgColor_modal;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        border-radius: 25px;
-        padding: 3rem 2rem;
-        gap: 2rem;
-        justify-content: center;
     }
 }
 
@@ -53,26 +63,18 @@
     .home {
         &__bloc {
             border-radius: 18px;
-            &-img {
-                border-radius: 18px;
-            }
-            &-title {
-                font-size: 2rem;
-                width: 100%;
-                left: 50%;
-                transform: translate(-30%, -50%);
-            }
-        }
-    }
-}
-@media screen and (max-width: 730px) {
-    .home {
-        &__bloc {
-            &-title {
-                font-size: 2rem;
-                width: 100%;
-                left: 39%;
-                transform: translate(-38%, -50%);
+            &__header {
+                &__bloc-img {
+                    &__img {
+                        border-radius: 18px;
+                    }
+                }
+                &__title-bloc {
+                    &__title {
+                        font-size: 2rem;
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -80,23 +82,36 @@
 
 @media screen and (max-width: 390px) {
     .home {
+        margin: 0 auto;
         &__bloc {
-            width: 335px;
-            &-img {
+            &__header {
+                width: 335px;
                 height: 111px;
+                margin-bottom: 1rem;
+                &__bloc-img {
+                    border-radius: 10px;
+                    height: 100%;
+                    &__img {
+                        border-radius: 10px;
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+                &__title-bloc {
+                    &__title {
+                        font-size: 24px;
+                        font-weight: 500;
+                        text-align: left;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+            &__card-container {
+                flex-direction: column;
+                padding: 2rem 1rem;
                 border-radius: 10px;
+                width: 335px;
             }
-            &-title {
-                font-size: 24px;
-                font-weight: 500;
-                line-height: 100%;
-                width: 65%;
-                left: 30%;
-                top: 60%;
-            }
-        }
-        &__card-container {
-            margin: 2rem auto;
         }
     }
 }

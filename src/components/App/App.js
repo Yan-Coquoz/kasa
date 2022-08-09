@@ -27,9 +27,9 @@ const App = () => {
                         <Route path="*" element={<Navigate to="/error404" />} />
                     </Routes>
                 </div>
-                {/* TODO Voir le positionnement du footer */}
-                <Footer />
             </div>
+            {/* TODO Voir le positionnement du footer */}
+            <Footer />
         </div>
     );
 };
