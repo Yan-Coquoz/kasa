@@ -4,8 +4,10 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    max-width: 1240px;
+    min-width: 389px;
     &__bloc {
-        width: 80%;
+        width: 90%;
         display: flex;
         justify-content: space-between;
         flex-direction: column;

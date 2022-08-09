@@ -1,9 +1,10 @@
 @use "../../styles/vars" as v;
 
 .slider {
-    // width: 100%;
+    width: 100%;
     position: relative;
-    // container image
+
+    // SECTION container image
     &__bloc-ul {
         list-style: none;
         padding: 0;
@@ -17,36 +18,60 @@
             }
         }
     }
-    // container chevron
+    // SECTION container chevron
     &__bloc-chevron {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 55%;
+        width: 100%;
+        left: 50%;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
         &__partie-g {
-            width: 80px;
-            height: 80px;
-            position: absolute;
-            top: 50%;
-            left: 3rem;
-            z-index: 10;
             cursor: pointer;
-            user-select: none;
+            height: 79px;
+            width: 47px;
+            margin-left: 2rem;
             &__gauche {
-                object-fit: contain;
+                object-fit: cover;
                 width: 100%;
                 transform: rotate(270deg);
             }
         }
         &__partie-d {
-            z-index: 10;
             cursor: pointer;
-            width: 80px;
-            height: 80px;
-            position: absolute;
-            top: 50%;
-            right: 3rem;
-            user-select: none;
+            height: 79px;
+            width: 47px;
+            margin-right: 2rem;
             &__droite {
-                object-fit: contain;
+                object-fit: cover;
                 width: 100%;
                 transform: rotate(90deg);
+            }
+        }
+    }
+}
+@media screen and (max-width: 390px) {
+    .slider {
+        &__bloc-ul {
+            &__bloc-li {
+                &__img {
+                    border-radius: 10px;
+                    height: 255px;
+                }
+            }
+        }
+        &__bloc-chevron {
+            &__partie-g {
+                width: 12px;
+                font-weight: bolder;
+                margin: 0 1.5rem;
+            }
+            &__partie-d {
+                margin: 0 1.5rem;
+                width: 12px;
+                font-weight: bolder;
             }
         }
     }

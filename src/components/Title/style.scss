@@ -1,6 +1,7 @@
 @use "../../styles/vars" as v;
 
 .location__title-container {
+    margin-bottom: 1rem;
     width: 100%;
     &__title {
         color: v.$kasa_color;
@@ -26,6 +27,26 @@
             border-radius: 25px;
             margin-right: 1rem;
             margin-top: 1rem;
+        }
+    }
+}
+@media screen and (max-width: 390px) {
+    .location__title-container {
+        &__title {
+            font-size: 18px;
+            font-weight: normal;
+            letter-spacing: 1.2px;
+        }
+        &__loc {
+            margin-bottom: 0;
+        }
+        &__bloc-tag {
+            margin-bottom: 1rem;
+            &__tag {
+                border-radius: 5px;
+                padding: 0.3rem 1rem;
+                margin-right: 0.5rem;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 @use "../../styles/vars" as v;
 
 .footer {
+    align-self: center;
     align-items: center;
     background-color: v.$kasa_bgColor_footer;
     display: flex;

@@ -1,8 +1,9 @@
 @use "../../styles/vars" as v;
+
 .modal {
     &__para {
         width: 100%;
-        margin-top: 2rem;
+        margin-bottom: 2rem;
         &__bloc-title {
             display: flex;
             align-items: center;
@@ -11,6 +12,7 @@
             background-color: v.$kasa_color;
             padding: 0 1rem;
             border-radius: 5px;
+            margin: 0;
             &__title {
                 color: v.$kasa_color_footer;
                 font-size: 1.5rem;
@@ -52,6 +54,38 @@
                 &__li {
                     font-size: 18px;
                     line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 390px) {
+    .modal {
+        &__para {
+            &__bloc-title {
+                &__title {
+                    font-size: 14px;
+                    margin: 0;
+                }
+                // btn chevron
+                &__bloc-icon {
+                    &__btn {
+                        padding: 0.5rem;
+                    }
+                    &__icon {
+                        width: 9px;
+                        height: 15px;
+                    }
+                }
+            }
+            &__bloc-modal {
+                &__p {
+                    font-size: 12px;
+                }
+                &__ul {
+                    &__li {
+                        font-size: 12px;
+                    }
                 }
             }
         }

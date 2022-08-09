@@ -4,8 +4,8 @@
     max-width: 340px;
     max-height: 340px;
     &__bloc {
-        width: 100%;
-        height: 100%;
+        width: calc(1240px - ((340px * 3) - 96px));
+        height: 340px;
         position: relative;
         &__img {
             background: linear-gradient(

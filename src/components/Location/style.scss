@@ -18,3 +18,16 @@
         gap: 5%;
     }
 }
+@media screen and (max-width: 650px) {
+    .location {
+        &__header {
+            flex-direction: column;
+        }
+        &__modals {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5%;
+        }
+    }
+}

@@ -1,7 +1,8 @@
 @use "../../styles/vars" as v;
 
-.location__identity-container {
+.identity {
     width: 100%;
+    margin: 2rem 0;
     &__bloc-name {
         display: flex;
         justify-content: flex-end;
@@ -37,6 +38,48 @@
             margin-left: 0.5rem;
             &.active {
                 color: v.$kasa_color;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .identity {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin: 1rem 0;
+        align-items: center;
+        height: 100%;
+
+        &__bloc-star {
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0;
+        }
+    }
+}
+@media screen and (max-width: 390px) {
+    .identity {
+        margin: 0 0 1rem 0;
+        &__bloc-name {
+            &__name {
+                width: 50px;
+                height: 33px;
+                font-size: 12px;
+                text-align: right;
+            }
+            &__bloc-photo {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+        &__bloc-star {
+            width: 98px;
+            height: 18px;
+            &__star {
+                width: 1rem;
+                height: 1rem;
             }
         }
     }

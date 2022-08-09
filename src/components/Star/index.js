@@ -18,8 +18,8 @@ const Star = ({ rate }) => {
                 icon={faStar}
                 className={
                     i < rate
-                        ? "location__identity-container__bloc-star__star active"
-                        : "location__identity-container__bloc-star__star"
+                        ? "identity__bloc-star__star active"
+                        : "identity__bloc-star__star"
                 }
                 key={i}
             />
