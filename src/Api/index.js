@@ -1,7 +1,7 @@
 //  const URLDatas = "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json";
 // const jsonDatas = "/public/datas.json";
 
-const fetcher = (url) =>
+export const fetcher = (url) => {
     fetch(url, {
         method: "GET",
         headers: {
@@ -19,5 +19,4 @@ const fetcher = (url) =>
         })
 
         .catch((error) => console.log(error));
-
-export default fetcher;
+};
