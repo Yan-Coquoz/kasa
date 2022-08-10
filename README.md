@@ -76,6 +76,8 @@ Dans le fichier package.json
 
 ```
 
+l'adresse <https://yan-coquoz.github.io/> est le localhost lors du lancement de l'app avec npm start.
+
 mettre le site sur github après la configuration
 
 ```bash
