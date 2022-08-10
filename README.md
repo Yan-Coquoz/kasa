@@ -57,4 +57,29 @@ La galerie doit toujours rester de la même hauteur, celle indiquée sur la maqu
 npm i prop-types
 ```
 
+- Github Page
+
+```bash
+npm i gh-pages -D
+```
+
+Dans le fichier package.json
+
+```json
+{
+    "homepage": "https://yan-coquoz.github.io/kasa",
+ "scripts": {
+        "predeploy":"npm run build",
+        "deploy":"gh-pages -d build"
+    },
+}
+
+```
+
+mettre le site sur github après la configuration
+
+```bash
+npm run deploy
+```
+
    </details>
