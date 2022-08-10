@@ -47,28 +47,31 @@ const Slider = ({ pictures }) => {
                     );
                 })}
             </ul>
-            <div className="slider__bloc-chevron">
-                <div
-                    className="slider__bloc-chevron__partie-g"
-                    onClick={handleChevronG}
-                >
-                    <img
-                        src={chevron}
-                        alt="chevron-gauche"
-                        className="slider__bloc-chevron__partie-g__gauche"
-                    />
+
+            {length > 1 && (
+                <div className="slider__bloc-chevron">
+                    <div
+                        className="slider__bloc-chevron__partie-g"
+                        onClick={handleChevronG}
+                    >
+                        <img
+                            src={chevron}
+                            alt="chevron-gauche"
+                            className="slider__bloc-chevron__partie-g__gauche"
+                        />
+                    </div>
+                    <div
+                        className="slider__bloc-chevron__partie-d"
+                        onClick={handleChevronD}
+                    >
+                        <img
+                            src={chevron}
+                            alt="chevron-droite"
+                            className="slider__bloc-chevron__partie-d__droite"
+                        />
+                    </div>
                 </div>
-                <div
-                    className="slider__bloc-chevron__partie-d"
-                    onClick={handleChevronD}
-                >
-                    <img
-                        src={chevron}
-                        alt="chevron-droite"
-                        className="slider__bloc-chevron__partie-d__droite"
-                    />
-                </div>
-            </div>
+            )}
         </div>
     );
 };
