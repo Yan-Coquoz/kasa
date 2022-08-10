@@ -1,13 +1,15 @@
 {
     "name": "kasa-app",
     "version": "0.1.0",
-    "homepage": "https://yan-coquoz.github.io/kasa",
+    "homepage": "https://yan-coquoz.github.io",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d build",
+        "clean": "rm -rf build",
+        "clean:all": "rm -rf package-lock.json node_modules build"
     },
     "eslintConfig": {
         "extends": [
