@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Title from "../Title";
 import Identity from "../Identity";
 import Modale from "../Modale";
@@ -14,6 +13,7 @@ const jsonDatas = "/datas.json";
 
 const Location = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     // le Loader
     const [dataLoading, setDataLoading] = useState(true);
 
@@ -53,17 +53,20 @@ const Location = () => {
         }
     });
 
-    // loader
     useEffect(() => {
         if (hasError || !isFetching) {
             setDataLoading(true);
         }
         if (!hasError) {
             setDataLoading(false);
+
             const locData = getDatas.filter((data) => {
                 return data.id === id;
             });
-            setOneLocation(locData[0]);
+            // en cas d'id invalide
+            typeof locData[0] !== "undefined"
+                ? setOneLocation(locData[0])
+                : navigate("/error404");
         }
     }, [getDatas]);
 

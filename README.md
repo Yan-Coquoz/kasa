@@ -34,7 +34,7 @@ La galerie doit toujours rester de la même hauteur, celle indiquée sur la maqu
 - React Router
 
   ```bash
-  npm install react-router-dom@6
+  npm install react-router-dom
   ```
 
 - SASS
