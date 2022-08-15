@@ -4,20 +4,22 @@
     color: v.$kasa_color;
     width: 100%;
     margin: 0 auto;
-    height: calc(100vh - 24rem);
+    height: 70vh;
     &__bloc {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+
         &-title {
-            font-size: 18rem;
             margin-top: 0;
             margin-bottom: 0;
+            font-size: 18rem;
         }
         &-oups {
-            font-size: 36px;
             text-align: center;
+            font-size: 36px;
         }
     }
     &__goback {
@@ -25,35 +27,33 @@
         bottom: 25%;
         left: 0;
         text-align: center;
-        font-size: 18px;
         color: v.$kasa_color;
         display: block;
         margin-top: 3rem;
+        font-size: 18px;
     }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 600px) {
     .page404 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         &__bloc-title {
-            font-size: 12rem;
+            font-size: calc(18rem / 1.5);
         }
         &__bloc-oups {
-            font-size: 10rem;
+            font-size: calc(36px / 1.5);
         }
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 400px) {
     .page404 {
-        position: absolute;
-        top: 25%;
-        bottom: 25%;
-        left: 0;
-
         &__bloc-title {
-            font-size: 6rem;
+            font-size: calc(18rem / 2);
         }
         &__bloc-oups {
-            font-size: 8rem;
+            font-size: calc(36px / 2);
         }
     }
 }
