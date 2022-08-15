@@ -9,8 +9,16 @@
     &__bloc {
         width: 90%;
         display: flex;
+
         justify-content: space-between;
         flex-direction: column;
         margin: 0 auto;
+    }
+}
+@media screen and (max-width: 390px) {
+    .app {
+        &__bloc {
+            min-height: 845px;
+        }
     }
 }
