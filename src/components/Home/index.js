@@ -3,7 +3,6 @@ import Carte from "../Carte";
 import Loader from "../Loader";
 import bg from "../../assets/mainBG.png";
 import "./style.scss";
-// import datas from "../../Data";
 
 const jsonDatas = "/datas.json";
 
